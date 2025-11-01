@@ -34,7 +34,7 @@ export class Main extends Component {
         getMovies().then(movies => this.setState({ movies: movies, loaded: true }));
 
         async function getMovies() {
-            var uri = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${search}`;
+            var uri = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search}`;
             if (movieType) {
                 uri += `&type=${movieType}`;
             }
